@@ -8,17 +8,21 @@ Node.js version `4.0` or greater.
 
 # Installation
 
-    npm install hollrit
+```
+$ npm install hollrit
+```
 
 # Example
 
-    const hollrit = require('hollrit');
-    const login = hollrit.login;
-    const send = hollrit.send;
+```js
+const hollrit = require('hollrit');
+const login = hollrit.login;
+const send = hollrit.send;
 
-    login('username', 'password').then(function(currentUser) {
-      send(currentUser, 'hollr', 'Hello world!');
-    });
+login('username', 'password').then(function(currentUser) {
+  send(currentUser, 'hollr', 'Hello world!');
+});
+```
 
 # Documentation
 
@@ -26,17 +30,21 @@ Node.js version `4.0` or greater.
 
 Authenticates a user.
 
-    hollrit.login('username', 'password').then(function(currentUser) {
-      console.log(currentUser);
-    });
+```js
+hollrit.login('username', 'password').then(function(currentUser) {
+  console.log(currentUser);
+});
+```
 
 ## send(user, tag, message)
 
 Sends a hollr via a tag that the user owns.
 
-    hollrit.send(currentUser, 'tagYouOwn', 'Message you want to send.').then(function(status) {
-      console.log(status);
-    });
+```js
+hollrit.send(currentUser, 'tagYouOwn', 'Message you want to send.').then(function(status) {
+  console.log(status);
+});
+```
 
 # License
 
