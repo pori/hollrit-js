@@ -4,7 +4,7 @@ JavaScript SDK for [HollrIt](http://hollr.it/), a simple notification messaging 
 
 # Requirements
 
-Node.js version `4.0` or greater.
+Node.js version `4.0` or later.
 
 # Installation
 
@@ -24,7 +24,7 @@ login('username', 'password').then(function(currentUser) {
 });
 ```
 
-# Documentation
+# API
 
 ## login(username, password)
 
@@ -32,7 +32,7 @@ Authenticates a user.
 
 ```js
 hollrit.login('username', 'password').then(function(currentUser) {
-  console.log(currentUser);
+  console.log(currentUser); // { userId: "...", "mobileServiceAuthenticationToken": "..." }
 });
 ```
 
@@ -42,7 +42,7 @@ Sends a hollr via a tag that the user owns.
 
 ```js
 hollrit.send(currentUser, 'tagYouOwn', 'Message you want to send.').then(function(status) {
-  console.log(status);
+  console.log(status); // 201
 });
 ```
 
