@@ -1,0 +1,35 @@
+{
+  "name": "hollrit",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for HollrIt.",
+  "main": "index.js",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.8.0",
+    "jshint": "^2.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pori/hollrit-js.git"
+  },
+  "keywords": [
+    "sdk",
+    "hollrit",
+    "hollr",
+    "client",
+    "notifications",
+    "push"
+  ],
+  "author": "Alexander Hernandez <porialex@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pori/hollrit-js/issues"
+  },
+  "homepage": "https://github.com/pori/hollrit-js#readme"
+}
