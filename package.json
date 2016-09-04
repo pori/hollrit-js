@@ -1,35 +1,39 @@
 {
   "name": "hollrit",
-  "version": "1.0.2",
-  "description": "JavaScript SDK for HollrIt.",
-  "main": "index.js",
-  "dependencies": {
-    "q": "^1.4.1",
-    "request": "^2.65.0"
-  },
-  "devDependencies": {
-    "jest-cli": "^0.8.0",
-    "jshint": "^2.8.0"
-  },
+  "version": "1.0.3",
+  "description": "SDK for HollrIt",
+  "main": "build/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pori/hollrit-js.git"
+    "url": "git+https://github.com/pori/hollrit.js.git"
   },
   "keywords": [
     "sdk",
     "hollrit",
     "hollr",
-    "client",
     "notifications",
     "push"
   ],
-  "author": "Alexander Hernandez <porialex@gmail.com>",
+  "author": "A. Hernandez <porialex@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pori/hollrit-js/issues"
   },
-  "homepage": "https://github.com/pori/hollrit-js#readme"
+  "homepage": "https://github.com/pori/hollrit-js#readme",
+  "devDependencies": {
+    "async-to-gen": "^1.0.5",
+    "ava": "^0.16.0",
+    "nock": "^8.0.0"
+  },
+  "dependencies": {
+    "bespeak": "^0.1.0"
+  },
+  "ava": {
+    "require": [
+      "async-to-gen/register"
+    ]
+  }
 }

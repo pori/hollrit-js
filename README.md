@@ -1,51 +1,54 @@
 # HollrIt.js
 
-JavaScript SDK for [HollrIt](http://hollr.it/), a simple notification messaging app.
+JS client for [HollrIt](http://hollr.it/).
 
-# Requirements
-
-Node.js version `4.0` or later.
-
-# Installation
+# Install
 
 ```
-$ npm install hollrit
+npm install hollrit
 ```
 
 # Example
 
 ```js
-const hollrit = require('hollrit');
-const login = hollrit.login;
-const send = hollrit.send;
+import hollrit from 'hollrit';
 
-login('username', 'password').then(function(currentUser) {
-  send(currentUser, 'hollr', 'Hello world!');
-});
+export default async function () {
+  let client = hollrit('username', 'password');
+  let response = await client.send('tag', 'message');
+}
 ```
 
 # API
 
-## login(username, password)
+## hollrit(username, password)
 
-Authenticates a user.
+Create a new HollrIt client. 
 
 ```js
-hollrit.login('username', 'password').then(function(currentUser) {
-  console.log(currentUser); // { userId: "...", "mobileServiceAuthenticationToken": "..." }
-});
+const client = hollrit('username', 'password');
 ```
 
-## send(user, tag, message)
+## login()
 
-Sends a hollr via a tag that the user owns.
+Manually logs a client in, fetching a new user token.
 
 ```js
-hollrit.send(currentUser, 'tagYouOwn', 'Message you want to send.').then(function(status) {
-  console.log(status); // 201
+client.login()
+```
+
+## send(tag, message, webook)
+
+Sends a message. Optionally, registers webhooks for success send.
+
+```js
+const response = await hollrit.send('tag', 'message', {
+  webhookUrl: 'http://example.com',
+  webhookPayload: { foo: 'bar' }
 });
 ```
 
 # License
 
 MIT
+
