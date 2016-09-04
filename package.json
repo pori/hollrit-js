@@ -2,8 +2,9 @@
   "name": "hollrit",
   "version": "1.0.3",
   "description": "SDK for HollrIt",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prepublish": "mkdir -p dist && async-to-gen lib/index.js -o dist/index.js",
     "test": "ava",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
