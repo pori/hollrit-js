@@ -1,5 +1,8 @@
 # HollrIt.js
 
+[![Build Status](https://travis-ci.org/pori/hollrit.js.svg?branch=master)](https://travis-ci.org/pori/hollrit.js)
+[![Coverage Status](https://coveralls.io/repos/github/pori/hollrit.js/badge.svg?branch=master)](https://coveralls.io/github/pori/hollrit.js?branch=master)
+
 JS client for [HollrIt](http://hollr.it/).
 
 # Install
