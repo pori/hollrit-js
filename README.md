@@ -45,7 +45,7 @@ client.login()
 Sends a message. Optionally, registers webhooks for success send.
 
 ```js
-const response = await hollrit.send('tag', 'message', {
+const response = await client.send('tag', 'message', {
   webhookUrl: 'http://example.com',
   webhookPayload: { foo: 'bar' }
 });
